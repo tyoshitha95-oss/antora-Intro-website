@@ -1,5 +1,5 @@
 site:
-  title: Monyfi AAA
+  title: Antora Website
   start_page: ROOT::pages/index.adoc 
 content:
   sources:
