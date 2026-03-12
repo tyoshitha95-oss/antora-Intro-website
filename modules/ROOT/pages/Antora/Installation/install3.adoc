@@ -1,0 +1,12 @@
+== Version Install
+
+Sometimes a project requires a specific version of Antora to maintain compatibility with existing documentation configurations. In such cases, a particular version can be installed explicitly.
+
+[source,bash]
+----
+npm install -g @antora/cli@3.1 @antora/site-generator@3.1
+----
+
+This ensures that the selected version is used instead of automatically installing the latest release.
+
+NOTE: Using a fixed version can help avoid unexpected issues caused by changes in newer versions.

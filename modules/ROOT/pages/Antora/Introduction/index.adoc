@@ -1,0 +1,15 @@
+= Introduction
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Antora is a modern documentation site generator designed to help teams create structured, scalable, and maintainable technical documentation. In many software and enterprise environments, documentation must be organized clearly, updated regularly, and accessible to different types of users. Antora provides a solution for managing documentation efficiently while generating a clean and navigable documentation website.
+
+This section provides a general overview of Antora and explains its role in modern documentation development. It introduces the core concept behind Antora and demonstrates how it helps teams manage large documentation projects in a structured way.
+
+In this section, the following topics are discussed:
+
+* *What Is Antora* – Explains the purpose and core functionality of Antora.
+* *Why Choose Antora* – Highlights the advantages of using Antora for documentation management.
+* *Who Is It For* – Identifies the users and teams that benefit from using Antora.

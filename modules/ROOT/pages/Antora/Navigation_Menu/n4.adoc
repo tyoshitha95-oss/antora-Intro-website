@@ -1,0 +1,35 @@
+= Version Dropdown and Component Selector
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Antora automatically generates version and component selectors in the documentation interface when multiple versions or components exist.
+
+**Version Dropdown**
+
+If a component has multiple versions defined in different branches or tags, Antora displays a version selector in the UI. This allows users to switch between documentation versions such as:
+
+* Version 1.0
+* Version 2.0
+* Version 3.0
+
+Example version definition in `antora.yml`:
+
+[source,yaml]
+----
+name: api-docs
+version: 2.0
+----
+
+When multiple versions are available, the documentation site will include a dropdown menu to switch between them.
+
+**Component Selector**
+
+If the documentation site contains multiple components (for example `user-guide`, `api-docs`, and `admin-docs`), Antora may display a component selector that allows users to switch between different documentation sections.
+
+Example components:
+
+* User Guide
+* API Documentation
+* Administrator Guide

@@ -1,0 +1,53 @@
+= Common Error Messages and Solutions
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+During the site generation process, Antora may display error or warning messages in the terminal. These messages usually indicate problems with configuration files, missing pages, incorrect paths, or dependency issues.
+
+*Example 1: Start page not found*
+
+----
+Start page specified for site not found
+----
+
+This error occurs when the start page defined in the playbook does not exist or the reference path is incorrect.
+
+Solution:
+* Verify the `start_page` value in `antora-playbook.yml`
+* Ensure the referenced page exists inside the correct module and directory.
+
+Example:
+
+[source,yaml]
+----
+site:
+  start_page: component-name::index.adoc
+----
+
+*Example 2: Navigation file error*
+
+----
+nav file not found
+----
+
+This occurs when the navigation file defined in `antora.yml` cannot be located.
+
+Solution:
+* Confirm that the path to `nav.adoc` is correct
+* Ensure the navigation file exists in the specified module.
+
+*Example 3: Broken page reference*
+
+----
+xref target not found
+----
+
+This error appears when an internal page reference cannot be resolved.
+
+Solution:
+* Check the `xref:` link in the `.adoc` file
+* Ensure the referenced page exists within the component or module.
+
+TIP: Always verify directory paths and file names when resolving navigation or reference errors.

@@ -1,0 +1,205 @@
+= Build Your First Antora Site
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+== Complete the following steps
+
+This quickstart walks you through the initial steps required to install Antora and generate your first documentation site. On this page, you’ll learn:
+
+* How to install Node.js
+* How to install Antora
+* How to create your first Antora playbook
+* How to run Antora to generate a site based on the playbook
+
+You can skip the installation steps by using the Antora Docker image if you prefer, but this guide covers local installation.
+
+=== 1. Install Node.js
+
+Antora requires an active Long Term Support (LTS) release of Node.js. Check if Node.js is installed:
+
+[source,bash]
+----
+node -v
+----
+
+If Node.js is not installed, or the version is not LTS, use **nvm** to install or update it:
+
+*Linux/macOS:*
+[source,bash]
+----
+nvm install --lts
+nvm alias default 16
+----
+
+*Windows:*
+[source,bash]
+----
+nvm install 16.20.2
+nvm alias default 16.20.2
+----
+
+=== 2. Install Antora
+
+Create a project directory and navigate into it:
+
+[source,bash]
+----
+mkdir docs-site && cd docs-site
+----
+
+Initialize a minimal package.json:
+
+[source,bash]
+----
+node -e "fs.writeFileSync('package.json', '{}')"
+----
+
+Install Antora locally:
+
+[source,bash]
+----
+npm i -D -E antora
+----
+
+Verify installation:
+
+[source,bash]
+----
+npx antora -v
+----
+
+Optional: Install globally (not recommended for team projects):
+
+[source,bash]
+----
+npm i -g antora
+antora -v
+----
+
+=== 3. Create a Playbook File
+
+Create a playbook named `antora-playbook.yml` with remote content sources:
+
+[source,yaml]
+----
+site:
+  title: Docs Site
+  start_page: component-b::index.adoc
+content:
+  sources: 
+    - url: https://gitlab.com/antora/demo/demo-component-a.git
+      branches: HEAD
+    - url: https://gitlab.com/antora/demo/demo-component-b.git
+      branches: [v2.0, v1.0]
+      start_path: docs
+ui: 
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+----
+
+=== 4. Run Antora
+
+Generate the documentation site using:
+
+[source,bash]
+----
+npx antora antora-playbook.yml
+----
+
+TIP: Use the `--fetch` option to always pull the latest content:
+
+[source,bash]
+----
+npx antora --fetch antora-playbook.yml
+----
+
+The generated site will be in:
+
+----
+build/site
+----
+
+Open `index.html` in a browser to view your first Antora documentation site.
+
+=== 5. Using Local Content Sources
+
+To use a local content source instead of a remote repository:
+
+[source,bash]
+----
+git init
+git commit --allow-empty -m init
+mkdir -p modules/ROOT/pages
+----
+
+Add a start page:
+
+[source,adoc]
+----
+modules/ROOT/pages/index.adoc
+= Welcome!
+You are home.
+----
+
+Add a second page:
+
+[source,adoc]
+----
+modules/ROOT/pages/new-page.adoc
+= New Page
+You've found a new page.
+----
+
+Create navigation:
+
+[source,adoc]
+----
+modules/ROOT/nav.adoc
+* xref:new-page.adoc[]
+----
+
+Create the component descriptor `antora.yml`:
+
+[source,yaml]
+----
+name: project-name
+version: ~
+title: Project Name
+nav:
+  - modules/ROOT/nav.adoc
+----
+
+Update the playbook to use the local source:
+
+[source,yaml]
+----
+site:
+  title: Docs Site
+  start_page: project-name::index.adoc
+content:
+  sources:
+    - url: .
+      branches: HEAD
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+----
+
+Generate the site as before:
+
+[source,bash]
+----
+npx antora antora-playbook.yml
+----
+
+Optional: Add a `.gitignore` file:
+
+[source,adoc]
+----
+/build/
+/node_modules/
+----

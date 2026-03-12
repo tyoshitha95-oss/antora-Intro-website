@@ -1,0 +1,25 @@
+= Previewing UI Changes
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+When modifying the UI, it is important to preview changes locally before publishing them. Antora allows developers to test UI changes by referencing the local UI bundle in the playbook.
+
+Example playbook configuration for local UI testing:
+
+[source,yaml]
+----
+ui:
+  bundle:
+    url: ./build/ui-bundle.zip
+----
+
+After updating the UI files and rebuilding the bundle, run Antora again to regenerate the documentation site:
+
+[source,bash]
+----
+npx antora antora-playbook.yml
+----
+
+The generated site will reflect the updated UI changes. By opening the generated `index.html` file in a browser, developers can verify layout updates, styling changes, and navigation behavior before deploying the documentation site.

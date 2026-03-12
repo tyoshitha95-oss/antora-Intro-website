@@ -1,0 +1,24 @@
+= Page Attribute and Behaviour
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Page attributes are variables defined at the top of an AsciiDoc page. They control page behavior and provide metadata used during site generation.
+
+Example:
+
+[source,asciidoc]
+----
+= Installation Guide
+:page-description: Steps to install the system
+:page-tags: installation, setup
+----
+
+Common page attributes include:
+
+* `:page-description:` – Provides a description of the page
+* `:page-tags:` – Defines keywords for indexing
+* `:page-layout:` – Controls the page layout
+* `:page-aliases:` – Defines alternate URLs for the page
+

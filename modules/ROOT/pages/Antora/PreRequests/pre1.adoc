@@ -1,0 +1,89 @@
+= Required Competencies
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+== Required Software
+
+To build and manage an Antora documentation site, several core tools must be installed in your system environment.
+
+The following software is required:
+
+* **Node.js** – Used to run Antora and manage JavaScript dependencies.
+* **npm (Node Package Manager)** – Installs and manages Antora packages.
+* **Git** – Required for cloning repositories and managing documentation source files.
+
+These tools form the basic environment needed to generate and maintain an Antora documentation site.
+
+.Example
+====
+To verify that the required tools are installed correctly, run the following commands in the terminal:
+
+[source,bash]
+----
+node -v
+npm -v
+git --version
+----
+
+Each command should return the installed version number.
+====
+
+== Recommended Tools & Editor Setup
+
+Although Antora documentation can be written using any text editor, using a modern development editor improves productivity and readability.
+
+The following tools are commonly recommended:
+
+* **Visual Studio Code (VS Code)** – Popular editor with strong AsciiDoc support
+* **IntelliJ IDEA** – Provides integrated documentation and Git features
+* **AsciiDoc Extensions** – Enable syntax highlighting and preview features
+
+For **Visual Studio Code**, the following extensions are recommended:
+
+* *AsciiDoc* – Provides syntax highlighting and preview support
+* *GitLens* – Improves Git history and repository management
+* *Prettier* – Helps maintain consistent formatting
+
+TIP: The live preview feature in AsciiDoc extensions allows writers to see how the documentation will appear while editing.
+
+== Basic Git Knowledge Needed
+
+Since Antora collects documentation from repositories, a basic understanding of Git is required to manage documentation content.
+
+Users should be familiar with the following Git operations:
+
+* Cloning a repository
+* Creating or switching branches
+* Committing changes
+* Pushing updates to a remote repository
+
+.Example
+====
+Common Git commands used when working with documentation:
+
+[source,bash]
+----
+git clone https://github.com/example/project-docs.git
+cd project-docs
+git add .
+git commit -m "Updated documentation"
+git push
+----
+====
+
+Understanding these operations helps contributors collaborate efficiently when updating documentation.
+
+== Node.js Version Recommendations
+
+Antora runs on Node.js, so using a stable and supported version is important for compatibility and performance.
+
+It is recommended to install the **Long Term Support (LTS)** version of Node.js, which provides better stability and long-term maintenance.
+
+Recommended versions:
+
+* Node.js **18.x LTS**
+* Node.js **20.x LTS**
+
+NOTE: Using outdated Node.js versions may cause compatibility issues when installing or running Antora.

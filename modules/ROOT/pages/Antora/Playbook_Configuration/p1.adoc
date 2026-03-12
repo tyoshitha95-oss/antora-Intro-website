@@ -1,0 +1,36 @@
+= Full Playbook Reference
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+A typical playbook contains several main sections that define how the documentation site is generated. These sections may include site configuration, content sources, UI settings, output directories, and runtime options.
+
+Basic example of a playbook file:
+
+[source,yaml]
+----
+site:
+  title: My Documentation Site
+  start_page: api-docs::index.adoc
+
+content:
+  sources:
+    - url: https://gitlab.com/example/api-docs.git
+      branches: main
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+output:
+  dir: ./build/site
+----
+
+Main sections of the playbook:
+
+* **site** – Defines site metadata such as title and start page.
+* **content** – Specifies the repositories and branches where documentation content is located.
+* **ui** – Defines the UI bundle used for the documentation site.
+* **output** – Specifies where the generated documentation site will be stored.

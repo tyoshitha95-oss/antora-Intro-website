@@ -1,0 +1,29 @@
+= Cache Cleaning
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Antora caches repositories and content sources to improve build performance. However, cached content may sometimes cause confusion when changes are not reflected in the generated site.
+
+If Antora appears to be using outdated content, clearing the cache can resolve the issue.
+
+One approach is to force Antora to fetch the latest content:
+
+[source,bash]
+----
+npx antora --fetch antora-playbook.yml
+----
+
+If problems persist, you can manually remove the cache directory.
+
+Example:
+
+[source,bash]
+----
+rm -rf ~/.cache/antora
+----
+
+After clearing the cache, run Antora again to regenerate the documentation site.
+
+TIP: Clearing the cache ensures that Antora retrieves the latest content from repositories and rebuilds the documentation site from scratch.

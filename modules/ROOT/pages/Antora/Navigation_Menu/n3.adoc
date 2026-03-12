@@ -1,0 +1,28 @@
+= Ordered vs Unordered lists
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Navigation files use AsciiDoc list syntax to define menu items. Both ordered and unordered lists can be used, but unordered lists are typically preferred for documentation navigation.
+
+**Unordered List Example (Recommended):**
+
+[source,asciidoc]
+----
+* xref:index.adoc[Home]
+* xref:overview.adoc[Overview]
+** xref:features.adoc[Features]
+** xref:architecture.adoc[Architecture]
+----
+
+The indentation level determines the hierarchy of the navigation structure.
+
+**Ordered List Example:**
+
+[source,asciidoc]
+----
+. xref:index.adoc[Home]
+. xref:overview.adoc[Overview]
+. xref:installation.adoc[Installation]
+----

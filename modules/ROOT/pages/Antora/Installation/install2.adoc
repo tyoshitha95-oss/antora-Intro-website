@@ -1,0 +1,20 @@
+== Project Install
+
+In many development environments, Antora is installed locally within a project instead of globally. This ensures that the documentation project uses a consistent Antora version regardless of the developer’s system configuration.
+
+To install Antora within a project, navigate to the project directory and run:
+
+[source,bash]
+----
+npm init -y
+npm install @antora/cli @antora/site-generator
+----
+
+Once installed, Antora can be executed using **npx**, which runs the locally installed version.
+
+[source,bash]
+----
+npx antora antora-playbook.yml
+----
+
+TIP: Local installation is recommended for team-based projects because it ensures that all contributors use the same Antora version.

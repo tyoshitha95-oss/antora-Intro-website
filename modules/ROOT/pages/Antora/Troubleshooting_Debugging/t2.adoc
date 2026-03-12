@@ -1,0 +1,25 @@
+= Verbose Logging and --Stacktrace
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Antora provides additional logging options that help diagnose issues during the build process. By enabling verbose logging or stack traces, developers can obtain more detailed information about errors.
+
+To run Antora with verbose logging:
+
+[source,bash]
+----
+npx antora --log-level debug antora-playbook.yml
+----
+
+This command provides detailed output about content aggregation, navigation generation, and site building.
+
+To display a stack trace for errors:
+
+[source,bash]
+----
+npx antora --stacktrace antora-playbook.yml
+----
+
+Stack traces are particularly useful for identifying issues related to configuration files, UI bundles, or plugin errors.

@@ -1,0 +1,21 @@
+== Verify Installation
+
+After installing Antora, it is important to confirm that the installation was completed successfully.
+
+Run the following command:
+
+[source,bash]
+----
+antora --version
+----
+
+If Antora is installed correctly, the terminal will display the installed version number.
+
+You can also test the installation by running Antora with a sample playbook file:
+
+[source,bash]
+----
+antora antora-playbook.yml
+----
+
+If the configuration is correct, Antora will generate the documentation site in the build directory.

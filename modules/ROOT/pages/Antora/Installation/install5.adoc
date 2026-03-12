@@ -1,0 +1,17 @@
+== Common Installation Issues
+
+During installation, some users may encounter configuration or dependency issues. The most common problems usually involve Node.js versions, missing packages, or incorrect environment paths.
+
+Common issues include:
+
+* **Node.js version incompatibility** – Ensure that a supported Node.js LTS version is installed.
+* **Command not recognized** – This may occur if the global npm directory is not included in the system PATH.
+* **Permission errors during installation** – On some systems, administrator privileges may be required for global installations.
+
+TIP: If installation fails, clearing the npm cache and reinstalling the packages may resolve the issue.
+
+[source,bash]
+----
+npm cache clean --force
+npm install -g @antora/cli @antora/site-generator
+----

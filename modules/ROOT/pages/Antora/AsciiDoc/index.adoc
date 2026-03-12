@@ -1,0 +1,9 @@
+= AsciiDocs
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+AsciiDoc is the markup language used by Antora to write and structure documentation content. It allows authors to create readable text files that can be converted into well-structured documentation pages with headings, lists, tables, links, and cross references.
+
+In an Antora documentation project, AsciiDoc files (`.adoc`) are used to create pages that are organized within modules and components. Understanding the basic syntax and features of AsciiDoc helps maintain consistent and well-structured documentation.

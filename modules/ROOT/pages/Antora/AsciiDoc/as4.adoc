@@ -1,0 +1,25 @@
+= Cross Reference
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Cross references allow pages to link to other pages within the documentation site. Antora provides the `xref:` macro to create internal links between pages, components, and modules.
+
+Example linking to another page in the same module:
+
+[source,asciidoc]
+----
+xref:installation.adoc[Installation Guide]
+----
+
+Example linking to another component:
+
+[source,asciidoc]
+----
+xref:api-docs::authentication.adoc[Authentication API]
+----
+
+Cross references ensure that links remain valid even when documentation structure changes.
+
+TIP: Use cross references instead of manual URLs to maintain consistent internal linking.

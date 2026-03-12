@@ -1,0 +1,9 @@
+= UI Customization
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Antora separates **content** from **presentation**, allowing documentation teams to customize the appearance of the documentation site without modifying the documentation files themselves. The visual layout, navigation style, and page structure are controlled by the **UI bundle**. This bundle contains templates, stylesheets, JavaScript files, and other assets that define how the generated documentation site looks and behaves.
+
+UI customization enables teams to adapt the documentation site to match organizational branding, improve user experience, and extend functionality.

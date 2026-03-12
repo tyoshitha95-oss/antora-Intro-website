@@ -1,0 +1,26 @@
+= Extension and Behaviour
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+AsciiDoc files used in Antora typically use the `.adoc` extension. Antora processes these files and converts them into HTML pages during the site generation process.
+
+Example file:
+
+----
+modules/ROOT/pages/installation.adoc
+----
+
+Antora automatically recognizes `.adoc` files located in the `pages/` directory and includes them as documentation pages.
+
+Certain behaviors are also controlled through AsciiDoc syntax, such as including other files, adding callouts, or embedding images.
+
+Example:
+
+[source,asciidoc]
+----
+image::images/architecture.png[System Architecture]
+----
+
+NOTE: Only `.adoc` files inside the `pages/` directory are treated as documentation pages by Antora.

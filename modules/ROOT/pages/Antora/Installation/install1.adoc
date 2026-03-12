@@ -1,0 +1,19 @@
+== Quick Global Install
+
+A quick way to start using Antora is to install it globally using the Node Package Manager (npm). A global installation allows Antora commands to be executed from any directory on the system.
+
+[source,bash]
+----
+npm install -g @antora/cli @antora/site-generator
+----
+
+After installation, the Antora command becomes available in the terminal, allowing users to run Antora directly when building documentation sites.
+
+.Example
+====
+[source,bash]
+----
+antora --version
+----
+This command displays the installed Antora version, confirming that the installation was successful.
+====

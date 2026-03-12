@@ -1,0 +1,87 @@
+= Versioning
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+
+Versioning is a core feature of Antora that allows documentation to be managed across multiple product releases. It enables teams to maintain documentation for different versions of a software product while publishing them within the same documentation site. Users can easily switch between versions to access the documentation that matches the version of the software they are using.
+
+Antora associates documentation versions with Git branches or tags. Each branch or tag represents a different version of the documentation and is defined using the component descriptor file (`antora.yml`). This approach ensures that documentation evolves together with the source code and product releases.
+
+== How Versioning Works in Antora
+
+In Antora, documentation is organized into **components**, and each component can have multiple **versions**. A version is typically associated with a Git branch, tag, or commit reference.
+
+When Antora builds the documentation site, it collects content from the specified branches or tags and treats each one as a separate version of the component.
+
+For example, a project may maintain documentation for several product releases:
+
+* Version 1.0
+* Version 2.0
+* Version 3.0
+
+Each version may contain different features, instructions, or configuration details relevant to that specific release.
+
+During the site generation process, Antora automatically groups and organizes these versions, allowing users to switch between them through the version selector in the documentation UI.
+
+== Defining Versions in antora.yml
+
+Versions are defined in the component descriptor file `antora.yml`. This file is located at the root of the component and identifies the component name, version, title, and navigation configuration.
+
+Example:
+
+[source,yaml]
+----
+name: api-docs
+version: 2.0
+title: API Documentation
+nav:
+  - modules/ROOT/nav.adoc
+----
+
+In this example:
+
+* `name` defines the component name.
+* `version` specifies the version of the documentation.
+* `title` provides a readable title for the component.
+* `nav` defines the navigation file used for the component.
+
+When Antora aggregates content from repositories, it reads the `version` value from each branch and organizes the documentation accordingly.
+
+TIP: It is recommended to use clear version numbers such as `1.0`, `2.0`, or `3.1` to match the corresponding product releases.
+
+== Prerelease & Display-Version
+
+Antora also supports **prerelease versions**, which are useful for documenting development or upcoming releases that are not yet finalized.
+
+A prerelease version can be defined by adding the `prerelease` key in the `antora.yml` file.
+
+Example:
+
+[source,yaml]
+----
+name: api-docs
+version: 3.0
+prerelease: true
+----
+
+When a version is marked as a prerelease, Antora indicates that the documentation belongs to a development or preview version of the product.
+
+Another useful property is `display-version`, which allows a custom version label to appear in the documentation UI without changing the actual version identifier.
+
+Example:
+
+[source,yaml]
+----
+name: api-docs
+version: 3.0
+display-version: 3.0 (Beta)
+----
+
+In this example:
+
+* `version` remains the internal identifier used by Antora.
+* `display-version` controls how the version appears to users in the documentation interface.
+
+This feature is helpful when labeling documentation as **Beta**, **Preview**, or **Development** versions while maintaining consistent version management internally.

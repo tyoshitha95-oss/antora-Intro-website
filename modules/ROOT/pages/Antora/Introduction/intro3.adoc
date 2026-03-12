@@ -1,0 +1,30 @@
+= Who is it for
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+== Who Is It For
+
+Antora is designed for teams and organizations that require well-structured technical documentation. It is particularly useful for environments where documentation must be regularly updated and maintained by multiple contributors.
+
+Typical users include:
+
+* Software Developers
+* Technical Writers
+* DevOps Engineers
+* Product Documentation Teams
+* Open-source Project Maintainers
+
+These users can collaborate on documentation while keeping it organized and version-controlled.
+
+.Example Scenario
+====
+An open-source software project may maintain documentation for multiple releases such as:
+
+* Version 1.0
+* Version 2.0
+* Version 3.0
+
+Antora allows all versions of the documentation to exist within the same documentation portal, enabling users to easily switch between versions and access the documentation relevant to the software they are using.
+====

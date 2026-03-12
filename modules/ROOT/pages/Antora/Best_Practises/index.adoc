@@ -1,0 +1,88 @@
+= Best Practices
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+
+== Component Naming & Versioning Conventions
+
+Components are the primary organizational units in Antora. Using clear and consistent naming and versioning is essential for readability and maintainability.
+
+**Naming Guidelines:**
+
+* Use lowercase letters with hyphens for multiple words:  
+  `user-guide`, `api-reference`, `admin-docs`
+* Avoid spaces or special characters
+* Use descriptive names reflecting the purpose of the component
+
+**Versioning Guidelines:**
+
+* Use semantic versioning where possible: `1.0`, `2.0`, `2.1.3`
+* Use `~` or `HEAD` for development or unstable versions
+* Maintain separate versions for major releases to allow readers to switch between them
+
+**Example:**
+
+[source,yaml]
+----
+name: api-docs
+version: 2.0
+title: API Documentation
+----
+
+---
+
+== Module Organization Strategies
+
+Modules subdivide components and help structure content logically. Proper module organization improves navigation and scalability.
+
+**Best Practices:**
+
+* **ROOT module:** Always contains the primary pages (e.g., index, introduction)
+* **Named modules:** Use for logical grouping like `tutorials`, `references`, or `examples`
+* Keep module content consistent with its purpose
+* Limit the depth of nesting to avoid complexity
+
+
+---
+
+== Reusable Content Patterns (Partials, Examples)
+
+Reusable content increases maintainability and reduces duplication. Antora supports **partials**, **examples**, and **shared assets**.
+
+**Partials:**
+
+* Snippets of text or reusable content
+* Stored in `modules/ROOT/partials/`
+* Included in pages via `include::partial-file.adoc[]`
+
+**Examples:**
+
+* Example code snippets stored in `modules/ROOT/examples/`
+* Images stored in `modules/ROOT/images/` and referenced via `image::filename.png[]`
+
+**Benefits:**
+
+* Single-source updates for repeated content
+* Cleaner, modular page design
+* Easier maintenance across versions and components
+
+---
+
+== Migration from Other Tools to Antora
+
+When moving from other documentation systems (e.g., Confluence, Markdown, DITA) to Antora:
+
+**Key Strategies:**
+
+1. **Content Audit:** Identify which content to migrate
+2. **Convert Formats:** Convert legacy content to AsciiDoc
+3. **Organize into Components & Modules:** Map old sections to Antora’s structure
+4. **Reuse Assets:** Move images, code snippets, and reusable text into appropriate directories
+5. **Test Builds:** Regularly generate sites to validate structure and links
+6. **Leverage Partials:** Replace repeated content with partials for maintainability
+
+**Tip:** Start with a small pilot project to validate the migration approach before moving all content.
+
+---

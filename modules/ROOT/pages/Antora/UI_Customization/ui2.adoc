@@ -1,0 +1,37 @@
+= Creating your own UI
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+To create a custom UI, the default UI project can be cloned and modified. The UI bundle is typically built using a Node.js-based project that contains templates and styling resources.
+
+Basic steps:
+
+1. Clone the UI project.
+2. Modify templates, styles, or scripts.
+3. Build the UI bundle.
+4. Reference the bundle in the playbook.
+
+Example steps:
+
+[source,bash]
+----
+git clone https://gitlab.com/antora/antora-ui-default.git
+cd antora-ui-default
+npm install
+npm run build
+----
+
+After building the UI, a bundle file (usually a `.zip`) will be generated in the `build` directory.
+
+The playbook can then reference the custom UI bundle:
+
+[source,yaml]
+----
+ui:
+  bundle:
+    url: ./ui-bundle.zip
+----
+
+This allows the documentation site to use the customized interface.

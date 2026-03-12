@@ -1,0 +1,32 @@
+= Basics
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+AsciiDoc uses simple markup syntax to structure documentation content. It supports headings, paragraphs, lists, code blocks, tables, and links.
+
+Example of a simple AsciiDoc page:
+
+[source,asciidoc]
+----
+= Introduction
+
+This is a sample documentation page.
+
+== Features
+
+* Easy to write
+* Structured formatting
+* Supports cross references
+----
+
+Common elements used in AsciiDoc include:
+
+* `=` for headings
+* `*` or `-` for lists
+* `source` blocks for code snippets
+* `image::` for images
+* `xref:` for internal page references
+
+TIP: Keep page structure simple and consistent to improve readability and navigation.

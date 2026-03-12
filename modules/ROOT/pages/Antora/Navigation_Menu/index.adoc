@@ -1,0 +1,9 @@
+= Navigation and Menu
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Navigation is an important part of an Antora documentation site. It allows users to browse through documentation pages in a structured and organized way. Antora uses navigation files to define the structure of menus that appear in the sidebar of the generated documentation site.
+
+Navigation is typically defined using AsciiDoc list syntax in `nav.adoc` files. These files specify the hierarchy of pages and determine how documentation is displayed in the navigation menu.

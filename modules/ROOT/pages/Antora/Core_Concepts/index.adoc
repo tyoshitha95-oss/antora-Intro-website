@@ -1,0 +1,102 @@
+= Core Concepts
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+
+== Content Sources & Content Repositories
+
+Antora aggregates documentation from one or more **content sources**, which are typically **Git repositories**. Each repository contains the files for one or more components of your documentation.  
+
+*Content sources define:*
+
+* Repository URL (remote or local)
+* Branches to include
+* Start paths within the repository  
+
+**Example:**  
+
+[source,yaml]
+----
+content:
+  sources:
+    - url: https://gitlab.com/antora/demo/demo-component-a.git
+      branches: HEAD
+    - url: ./local-docs
+      branches: main
+----
+
+This allows Antora to pull content from multiple locations and combine it into a single site.
+
+== Components & Versions
+
+Documentation is organized into **components**, which represent logical sections of a project, such as:
+
+* User Guide
+* API Documentation
+* Administrator Guide  
+
+Each component can have multiple **versions**, enabling support for documentation across different software releases.  
+
+**Example:**
+
+[source,yaml]
+----
+name: api-docs
+version: 2.0
+title: API Documentation
+----
+
+> Antora will treat each version separately, allowing users to switch between versions on the generated site.
+
+== Modules (ROOT vs Named Modules)
+
+Components are subdivided into **modules**, which hold the actual documentation content.  
+
+* **ROOT module** – Required for a component and usually contains the main site pages.  
+* **Named modules** – Optional additional modules that organize related content, e.g., tutorials, references, or advanced guides.
+
+
+Pages, Assets, Partials, Examples, Images Directories
+
+Each module follows a standard structure:
+
+* **pages/** – Contains the AsciiDoc content files (e.g., `.adoc`)  
+* **assets/** – CSS, JavaScript, or other static files  
+* **partials/** – Reusable snippets of documentation  
+* **examples/** – Example code or demonstrations  
+* **images/** – Diagrams, screenshots, or illustrations  
+
+**Example Module Structure:**
+
+
+== Playbook – The Heart of the Site
+
+The **playbook** is a YAML configuration file that defines **how Antora generates your site**. It specifies:
+
+* Site-level information (title, start page)
+* Content sources and their branches
+* Components and modules
+* UI bundle (theme and layout)
+* Output directories
+
+**Example Playbook:**
+
+[source,yaml]
+----
+site:
+  title: Docs Site
+  start_page: component-b::index.adoc
+content:
+  sources:
+    - url: https://gitlab.com/antora/demo/demo-component-a.git
+      branches: HEAD
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+----
+
+
+

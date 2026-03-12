@@ -1,0 +1,9 @@
+= Troubleshooting and Debugging
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+While working with Antora documentation projects, users may occasionally encounter errors related to configuration, dependencies, or content structure. Troubleshooting and debugging techniques help identify the cause of these issues and resolve them efficiently.
+
+This section highlights common error messages that may occur during the build process, explains how to enable detailed logging for debugging, and shows how to clear the cache when necessary.

@@ -1,0 +1,11 @@
+= Prerequisites
+:sectnums:
+:icons: font
+
+Before working with Antora documentation, it is important to ensure that the required tools and basic knowledge are available. Setting up the correct development environment helps avoid configuration issues and ensures that documentation can be built, tested, and maintained efficiently.
+
+Antora-based documentation projects typically rely on a combination of development tools, version control systems, and runtime environments. Having these tools properly installed allows contributors to create documentation, preview changes locally, and collaborate with other team members through shared repositories.
+
+This section outlines the fundamental requirements needed before starting with Antora documentation. It describes the essential software needed to run Antora, recommended editors and extensions that improve the writing experience, the basic Git knowledge required for managing documentation repositories, and the recommended Node.js versions for stable Antora operation.
+
+By ensuring these prerequisites are in place, users can work with Antora documentation smoothly and maintain a consistent workflow when creating, editing, and publishing technical documentation.

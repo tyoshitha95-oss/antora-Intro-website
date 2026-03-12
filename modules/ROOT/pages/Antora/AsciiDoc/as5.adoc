@@ -1,0 +1,31 @@
+= Attributes in Antora
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Attributes in Antora allow reusable values to be defined and referenced across documentation pages. They help maintain consistency and simplify updates.
+
+Example attribute definition:
+
+[source,asciidoc]
+----
+:project-name: My Documentation Project
+----
+
+Example usage:
+
+[source,asciidoc]
+----
+Welcome to the {project-name}.
+----
+
+Attributes can also be defined in configuration files such as the playbook or component descriptor and reused throughout the documentation.
+
+Benefits of using attributes:
+
+* Reduces repeated text
+* Simplifies global updates
+* Maintains consistent terminology
+
+TIP: Attributes are commonly used for product names, version numbers, and frequently used phrases.

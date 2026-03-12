@@ -1,0 +1,28 @@
+= Default UI vs Custom UI
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Antora provides a **default UI bundle**, which is suitable for most documentation projects. The default UI includes a responsive layout, navigation sidebar, version selector, and search integration.
+
+Example configuration using the default UI:
+
+[source,yaml]
+----
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+----
+
+Advantages of the default UI:
+
+* Ready-to-use design
+* Responsive layout
+* Integrated navigation and version selector
+* Minimal configuration required
+
+However, some projects require custom branding or additional features. In such cases, a **custom UI bundle** can be used. A custom UI allows organizations to modify layout templates, colors, fonts, navigation elements, and other visual components.
+
+TIP: Many teams start with the default UI and gradually customize it as the documentation project grows.

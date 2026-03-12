@@ -1,0 +1,33 @@
+= Environmental Variables
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Environmental variables can be used in the playbook to make configuration more flexible and adaptable to different environments such as development, staging, or production.
+
+These variables allow sensitive information or environment-specific settings to be defined outside the playbook.
+
+Example:
+
+[source,yaml]
+----
+site:
+  title: ${SITE_TITLE}
+----
+
+In the terminal, define the variable before running Antora:
+
+[source,bash]
+----
+export SITE_TITLE="My Project Documentation"
+npx antora antora-playbook.yml
+----
+
+Benefits of using environment variables:
+
+* Improves configuration flexibility
+* Keeps sensitive values out of the playbook file
+* Supports different environments without modifying the playbook
+
+TIP: Environment variables are especially useful when integrating Antora builds into CI/CD pipelines.

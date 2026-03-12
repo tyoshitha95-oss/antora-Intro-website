@@ -1,0 +1,10 @@
+= Playbook Configuration
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+The playbook is the central configuration file used by Antora to generate a documentation site. It defines how Antora collects content, how the site should be structured, and how the final documentation site should be built. The playbook is written in YAML format and typically stored as `antora-playbook.yml` in the root of the project.
+
+Through the playbook, you can configure site metadata, content sources, UI bundles, output settings, and various runtime options. Understanding the playbook structure is essential because it acts as the **control center** for the entire documentation build process.
+

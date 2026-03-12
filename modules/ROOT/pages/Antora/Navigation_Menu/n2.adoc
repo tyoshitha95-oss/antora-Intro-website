@@ -1,0 +1,26 @@
+= Multiple Navigation Files
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+Antora allows multiple navigation files to be used within a component. This is useful when documentation is organized into multiple modules.
+
+Example configuration in `antora.yml`:
+
+[source,yaml]
+----
+name: project-docs
+version: 2.0
+nav:
+  - modules/ROOT/nav.adoc
+  - modules/tutorials/nav.adoc
+----
+
+Each navigation file contributes to the overall navigation structure of the component.
+
+Benefits of multiple navigation files:
+
+* Better organization of large documentation projects
+* Separation of navigation for different modules
+* Easier maintenance of navigation structures

@@ -1,0 +1,24 @@
+= Why Choose Antora
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+== Why Choose Antora
+
+Antora provides a powerful and efficient way to manage documentation projects, especially when documentation needs to scale across multiple products, modules, or software versions.
+
+One of the key advantages of Antora is its ability to aggregate documentation from multiple repositories and assemble them into a unified documentation portal. This allows teams to maintain their documentation independently while still publishing it as a single structured site.
+
+TIP: Antora automatically generates navigation structures and ensures consistent formatting across all documentation pages.
+
+.Example Scenario
+====
+Consider a company that develops a *telecommunication management platform* with several subsystems:
+
+* Authentication Server
+* Billing System
+* Monitoring System
+
+Each subsystem may have its own documentation repository. Antora can combine these sources into a **single unified documentation portal**, allowing users to access all system documentation in one place.
+====

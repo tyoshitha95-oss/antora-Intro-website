@@ -1,0 +1,30 @@
+= Navigation File
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+A navigation file (`nav.adoc`) defines the menu structure for a component or module. It is referenced in the `antora.yml` file using the `nav` key.
+
+Example `antora.yml`:
+
+[source,yaml]
+----
+name: user-guide
+version: 1.0
+nav:
+  - modules/ROOT/nav.adoc
+----
+
+Example `nav.adoc`:
+
+[source,asciidoc]
+----
+* xref:index.adoc[Home]
+* xref:getting-started.adoc[Getting Started]
+* xref:installation.adoc[Installation]
+----
+
+Each entry in the navigation file links to a page using the `xref:` macro.
+
+TIP: The start page (`index.adoc`) is usually placed at the top of the navigation menu.

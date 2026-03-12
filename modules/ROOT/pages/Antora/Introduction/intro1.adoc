@@ -1,0 +1,23 @@
+= What is Antora
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+== What Is Antora
+
+Antora is a static documentation site generator used to build organized and scalable documentation websites. It collects documentation content from repositories, processes the content, and generates a complete documentation portal with structured navigation and cross-linked pages.
+
+Unlike traditional documentation methods that rely on manually created web pages or document files, Antora allows documentation to be managed in a structured and modular way. This makes it easier to maintain large documentation projects and keep them consistent over time.
+
+.Example Scenario
+====
+A company developing a *network authentication platform* may need documentation such as:
+
+* Installation Guide
+* User Guide
+* Administrator Guide
+* API Documentation
+
+Using Antora, these documents can be organized into structured sections and published as a **single documentation website** where users can easily navigate between topics.
+====

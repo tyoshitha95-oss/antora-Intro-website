@@ -1,0 +1,8 @@
+= Installation
+:toc: left
+:toclevels: 2
+:sectnums:
+:icons: font
+
+This section explains how to install Antora and prepare the environment required to build and manage an Antora documentation site. Depending on the project setup and development workflow, Antora can be installed globally on the system or locally within a specific project. This section covers different installation approaches, how to verify that the installation was successful, and some common issues that may occur during the installation process.
+
